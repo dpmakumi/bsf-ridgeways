@@ -135,7 +135,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* LipaLink Branding */}
       <div className="bg-white px-4 py-2 border-b border-gray-100">
         <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -147,7 +147,7 @@ export default function HomePage() {
       </div>
 
       {/* Main Content */}
-      <div className="px-4 py-6 space-y-6">
+      <div className="px-4 py-6 space-y-6 flex-grow max-w-md w-full mx-auto">
         <PaymentForm onSubmit={handlePayment} isLoading={paymentStatus === "processing"} />
       </div>
 

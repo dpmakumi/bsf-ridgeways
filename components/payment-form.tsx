@@ -99,7 +99,7 @@ export function PaymentForm({ onSubmit, isLoading = false }: PaymentFormProps) {
   const isFormValid = validatePhoneNumber(phoneNumber) && validateAmount(amount)
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 flex flex-col h-full">
       {/* Payment Summary Section */}
       <div className="bg-white rounded-lg border border-gray-200 p-4">
         <div className="flex items-center gap-2 mb-3">
@@ -133,7 +133,7 @@ export function PaymentForm({ onSubmit, isLoading = false }: PaymentFormProps) {
       </div>
 
       {/* Form Fields */}
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-6 flex flex-col flex-grow">
         {/* Phone Number Field */}
         <div className="bg-white rounded-lg border border-gray-200 p-4">
           <div className="flex items-center gap-2 mb-3">
@@ -205,6 +205,8 @@ export function PaymentForm({ onSubmit, isLoading = false }: PaymentFormProps) {
             "Pay Now (M-PESA)"
           )}
         </button>
+
+        <div className="flex-grow"></div>
 
         {/* Footer */}
         <div className="flex items-center justify-between text-xs">
