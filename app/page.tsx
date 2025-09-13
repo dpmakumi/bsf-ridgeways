@@ -147,7 +147,7 @@ export default function HomePage() {
       </div>
 
       {/* Main Content */}
-      <div className="px-4 py-6 space-y-6 flex-grow max-w-md w-full mx-auto">
+      <div className="px-4 py-6 space-y-6 flex-grow">
         <PaymentForm onSubmit={handlePayment} isLoading={paymentStatus === "processing"} />
       </div>
 
